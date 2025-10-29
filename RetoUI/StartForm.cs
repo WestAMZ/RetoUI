@@ -16,8 +16,9 @@ namespace RetoUI
             else
             {
                 timer.Stop();
-                //MainForm mainForm = new MainForm();
-                //mainForm.Show();
+                MainForm mainForm = new MainForm();
+                this.Hide();
+                mainForm.Show();
             }
         }
     }
