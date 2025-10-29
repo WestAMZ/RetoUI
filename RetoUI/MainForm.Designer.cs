@@ -28,19 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             panel_top = new Panel();
-            pictureBox1 = new PictureBox();
+            picture_toggle = new PictureBox();
             panel_windows_action = new Panel();
             btn_minimize = new Button();
             btn_maximaze = new Button();
             btn_close = new Button();
             panel_left = new Panel();
-            button2 = new Button();
-            button1 = new Button();
-            btn_inicio = new Button();
+            btn_sales = new Button();
+            btn_customer = new Button();
+            btn_home = new Button();
+            panel_main = new Panel();
+            timer_sidebar_transition = new System.Windows.Forms.Timer(components);
             panel_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picture_toggle).BeginInit();
             panel_windows_action.SuspendLayout();
             panel_left.SuspendLayout();
             SuspendLayout();
@@ -48,7 +51,7 @@
             // panel_top
             // 
             panel_top.BackColor = Color.White;
-            panel_top.Controls.Add(pictureBox1);
+            panel_top.Controls.Add(picture_toggle);
             panel_top.Controls.Add(panel_windows_action);
             panel_top.Dock = DockStyle.Top;
             panel_top.Location = new Point(0, 0);
@@ -57,16 +60,17 @@
             panel_top.TabIndex = 0;
             panel_top.MouseDown += top_panel_MouseDown;
             // 
-            // pictureBox1
+            // picture_toggle
             // 
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(35, 34);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
+            picture_toggle.Cursor = Cursors.Hand;
+            picture_toggle.Image = (Image)resources.GetObject("picture_toggle.Image");
+            picture_toggle.Location = new Point(12, 4);
+            picture_toggle.Name = "picture_toggle";
+            picture_toggle.Size = new Size(35, 34);
+            picture_toggle.SizeMode = PictureBoxSizeMode.StretchImage;
+            picture_toggle.TabIndex = 3;
+            picture_toggle.TabStop = false;
+            picture_toggle.Click += picture_toggle_Click;
             // 
             // panel_windows_action
             // 
@@ -115,77 +119,94 @@
             // panel_left
             // 
             panel_left.BackColor = Color.FromArgb(13, 27, 42);
-            panel_left.Controls.Add(button2);
-            panel_left.Controls.Add(button1);
-            panel_left.Controls.Add(btn_inicio);
+            panel_left.Controls.Add(btn_sales);
+            panel_left.Controls.Add(btn_customer);
+            panel_left.Controls.Add(btn_home);
             panel_left.Dock = DockStyle.Left;
             panel_left.Location = new Point(0, 44);
             panel_left.Name = "panel_left";
             panel_left.Size = new Size(200, 606);
             panel_left.TabIndex = 1;
             // 
-            // button2
+            // btn_sales
             // 
-            button2.BackColor = Color.FromArgb(13, 27, 42);
-            button2.Cursor = Cursors.Hand;
-            button2.Dock = DockStyle.Top;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 14.25F);
-            button2.ForeColor = Color.White;
-            button2.Image = Properties.Resources.customers;
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(0, 106);
-            button2.Name = "button2";
-            button2.Padding = new Padding(10, 0, 0, 0);
-            button2.Size = new Size(200, 53);
-            button2.TabIndex = 4;
-            button2.Text = "Ventas";
-            button2.UseVisualStyleBackColor = false;
+            btn_sales.BackColor = Color.FromArgb(13, 27, 42);
+            btn_sales.Cursor = Cursors.Hand;
+            btn_sales.Dock = DockStyle.Top;
+            btn_sales.FlatAppearance.BorderSize = 0;
+            btn_sales.FlatStyle = FlatStyle.Flat;
+            btn_sales.Font = new Font("Segoe UI", 14.25F);
+            btn_sales.ForeColor = Color.White;
+            btn_sales.Image = Properties.Resources.customers;
+            btn_sales.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_sales.Location = new Point(0, 106);
+            btn_sales.Name = "btn_sales";
+            btn_sales.Padding = new Padding(10, 0, 0, 0);
+            btn_sales.Size = new Size(200, 53);
+            btn_sales.TabIndex = 4;
+            btn_sales.Text = "Ventas";
+            btn_sales.UseVisualStyleBackColor = false;
+            btn_sales.Click += btn_sales_Click;
             // 
-            // button1
+            // btn_customer
             // 
-            button1.BackColor = Color.FromArgb(13, 27, 42);
-            button1.Cursor = Cursors.Hand;
-            button1.Dock = DockStyle.Top;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 14.25F);
-            button1.ForeColor = Color.White;
-            button1.Image = Properties.Resources.sales;
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 53);
-            button1.Name = "button1";
-            button1.Padding = new Padding(10, 0, 0, 0);
-            button1.Size = new Size(200, 53);
-            button1.TabIndex = 3;
-            button1.Text = "Clientes";
-            button1.UseVisualStyleBackColor = false;
+            btn_customer.BackColor = Color.FromArgb(13, 27, 42);
+            btn_customer.Cursor = Cursors.Hand;
+            btn_customer.Dock = DockStyle.Top;
+            btn_customer.FlatAppearance.BorderSize = 0;
+            btn_customer.FlatStyle = FlatStyle.Flat;
+            btn_customer.Font = new Font("Segoe UI", 14.25F);
+            btn_customer.ForeColor = Color.White;
+            btn_customer.Image = Properties.Resources.sales;
+            btn_customer.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_customer.Location = new Point(0, 53);
+            btn_customer.Name = "btn_customer";
+            btn_customer.Padding = new Padding(10, 0, 0, 0);
+            btn_customer.Size = new Size(200, 53);
+            btn_customer.TabIndex = 3;
+            btn_customer.Text = "Clientes";
+            btn_customer.UseVisualStyleBackColor = false;
+            btn_customer.Click += btn_customer_Click;
             // 
-            // btn_inicio
+            // btn_home
             // 
-            btn_inicio.BackColor = Color.FromArgb(13, 27, 42);
-            btn_inicio.Cursor = Cursors.Hand;
-            btn_inicio.Dock = DockStyle.Top;
-            btn_inicio.FlatAppearance.BorderSize = 0;
-            btn_inicio.FlatStyle = FlatStyle.Flat;
-            btn_inicio.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_inicio.ForeColor = Color.White;
-            btn_inicio.Image = Properties.Resources.home;
-            btn_inicio.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_inicio.Location = new Point(0, 0);
-            btn_inicio.Name = "btn_inicio";
-            btn_inicio.Padding = new Padding(10, 0, 0, 0);
-            btn_inicio.Size = new Size(200, 53);
-            btn_inicio.TabIndex = 2;
-            btn_inicio.Text = "Inicio";
-            btn_inicio.UseVisualStyleBackColor = false;
+            btn_home.BackColor = Color.FromArgb(13, 27, 42);
+            btn_home.Cursor = Cursors.Hand;
+            btn_home.Dock = DockStyle.Top;
+            btn_home.FlatAppearance.BorderSize = 0;
+            btn_home.FlatStyle = FlatStyle.Flat;
+            btn_home.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_home.ForeColor = Color.White;
+            btn_home.Image = Properties.Resources.home;
+            btn_home.ImageAlign = ContentAlignment.MiddleLeft;
+            btn_home.Location = new Point(0, 0);
+            btn_home.Name = "btn_home";
+            btn_home.Padding = new Padding(10, 0, 0, 0);
+            btn_home.Size = new Size(200, 53);
+            btn_home.TabIndex = 2;
+            btn_home.Text = "Inicio";
+            btn_home.UseVisualStyleBackColor = false;
+            btn_home.Click += btn_home_Click;
+            // 
+            // panel_main
+            // 
+            panel_main.BackColor = Color.FromArgb(27, 38, 59);
+            panel_main.Dock = DockStyle.Fill;
+            panel_main.Location = new Point(200, 44);
+            panel_main.Name = "panel_main";
+            panel_main.Size = new Size(799, 606);
+            panel_main.TabIndex = 2;
+            // 
+            // timer_sidebar_transition
+            // 
+            timer_sidebar_transition.Tick += timer_menu_transition_Tick;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(999, 650);
+            Controls.Add(panel_main);
             Controls.Add(panel_left);
             Controls.Add(panel_top);
             FormBorderStyle = FormBorderStyle.None;
@@ -193,7 +214,7 @@
             Text = "MainForm";
             FormClosed += MainForm_FormClosed;
             panel_top.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picture_toggle).EndInit();
             panel_windows_action.ResumeLayout(false);
             panel_left.ResumeLayout(false);
             ResumeLayout(false);
@@ -207,9 +228,11 @@
         private Button btn_maximaze;
         private Button btn_close;
         private Button btn_minimize;
-        private PictureBox pictureBox1;
-        private Button btn_inicio;
-        private Button button2;
-        private Button button1;
+        private PictureBox picture_toggle;
+        private Button btn_home;
+        private Button btn_sales;
+        private Button btn_customer;
+        private Panel panel_main;
+        private System.Windows.Forms.Timer timer_sidebar_transition;
     }
 }
