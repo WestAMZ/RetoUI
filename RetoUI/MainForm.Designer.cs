@@ -125,7 +125,7 @@
             panel_left.Dock = DockStyle.Left;
             panel_left.Location = new Point(0, 44);
             panel_left.Name = "panel_left";
-            panel_left.Size = new Size(200, 606);
+            panel_left.Size = new Size(200, 493);
             panel_left.TabIndex = 1;
             // 
             // btn_sales
@@ -141,10 +141,10 @@
             btn_sales.ImageAlign = ContentAlignment.MiddleLeft;
             btn_sales.Location = new Point(0, 106);
             btn_sales.Name = "btn_sales";
-            btn_sales.Padding = new Padding(10, 0, 0, 0);
+            btn_sales.Padding = new Padding(8, 0, 0, 0);
             btn_sales.Size = new Size(200, 53);
             btn_sales.TabIndex = 4;
-            btn_sales.Text = "Ventas";
+            btn_sales.Text = "     Ventas";
             btn_sales.UseVisualStyleBackColor = false;
             btn_sales.Click += btn_sales_Click;
             // 
@@ -161,10 +161,10 @@
             btn_customer.ImageAlign = ContentAlignment.MiddleLeft;
             btn_customer.Location = new Point(0, 53);
             btn_customer.Name = "btn_customer";
-            btn_customer.Padding = new Padding(10, 0, 0, 0);
+            btn_customer.Padding = new Padding(8, 0, 0, 0);
             btn_customer.Size = new Size(200, 53);
             btn_customer.TabIndex = 3;
-            btn_customer.Text = "Clientes";
+            btn_customer.Text = "     Clientes";
             btn_customer.UseVisualStyleBackColor = false;
             btn_customer.Click += btn_customer_Click;
             // 
@@ -181,10 +181,10 @@
             btn_home.ImageAlign = ContentAlignment.MiddleLeft;
             btn_home.Location = new Point(0, 0);
             btn_home.Name = "btn_home";
-            btn_home.Padding = new Padding(10, 0, 0, 0);
+            btn_home.Padding = new Padding(8, 0, 0, 0);
             btn_home.Size = new Size(200, 53);
             btn_home.TabIndex = 2;
-            btn_home.Text = "Inicio";
+            btn_home.Text = "     Inicio";
             btn_home.UseVisualStyleBackColor = false;
             btn_home.Click += btn_home_Click;
             // 
@@ -194,22 +194,23 @@
             panel_main.Dock = DockStyle.Fill;
             panel_main.Location = new Point(200, 44);
             panel_main.Name = "panel_main";
-            panel_main.Size = new Size(799, 606);
+            panel_main.Size = new Size(799, 493);
             panel_main.TabIndex = 2;
             // 
             // timer_sidebar_transition
             // 
+            timer_sidebar_transition.Interval = 10;
             timer_sidebar_transition.Tick += timer_menu_transition_Tick;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(999, 650);
+            BackColor = Color.FromArgb(13, 27, 42);
+            ClientSize = new Size(999, 537);
             Controls.Add(panel_main);
             Controls.Add(panel_left);
             Controls.Add(panel_top);
-            FormBorderStyle = FormBorderStyle.None;
             Name = "MainForm";
             Text = "MainForm";
             FormClosed += MainForm_FormClosed;

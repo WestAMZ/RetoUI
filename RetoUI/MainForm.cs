@@ -21,6 +21,7 @@ namespace RetoUI
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         private Form activeForm = null;
         private bool menuExpand = true;
+        private int sideBarSize = 200;
 
         // Constantes para mover la ventana
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -28,6 +29,7 @@ namespace RetoUI
         public MainForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -108,31 +110,32 @@ namespace RetoUI
         {
             if (menuExpand == false)
             {
-                this.panel_left.Width += 10;
-                if (this.panel_left.Width >= 200)
+                sideBarSize += 10;
+                
+                if (sideBarSize >= 200)
                 {
                     timer_sidebar_transition.Stop();
                     menuExpand = true;
-                    foreach (Control control in this.panel_left.Controls)
-                    {
-                        control.Visible = true;
-                    }
                 }
             }
             else
             {
-                this.panel_left.Width -= 10;
-                if (this.panel_left.Width <= 10)
+                sideBarSize -= 10;
+                if (sideBarSize <= 51)
                 {
-                    this.panel_left.Width = 0;
+                    sideBarSize = 51;
+                    
+                    
                     timer_sidebar_transition.Stop();
                     menuExpand = false;
-                    foreach (Control control in this.panel_left.Controls)
-                    {
-                        control.Visible = false;
-                    }
                 }
+                
             }
+
+            this.panel_left.Width = sideBarSize;
+            this.btn_home.Width = sideBarSize;
+            this.btn_customer.Width = sideBarSize;
+            this.btn_sales.Width = sideBarSize;
         }
 
         private void picture_toggle_Click(object sender, EventArgs e)
