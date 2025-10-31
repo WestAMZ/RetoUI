@@ -42,10 +42,15 @@
             btn_home = new Button();
             panel_main = new Panel();
             timer_sidebar_transition = new System.Windows.Forms.Timer(components);
+            panel_user = new Panel();
+            lbl_user_name = new Label();
+            pictureBox1 = new PictureBox();
             panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picture_toggle).BeginInit();
             panel_windows_action.SuspendLayout();
             panel_left.SuspendLayout();
+            panel_user.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel_top
@@ -122,6 +127,7 @@
             panel_left.Controls.Add(btn_sales);
             panel_left.Controls.Add(btn_customer);
             panel_left.Controls.Add(btn_home);
+            panel_left.Controls.Add(panel_user);
             panel_left.Dock = DockStyle.Left;
             panel_left.Location = new Point(0, 44);
             panel_left.Name = "panel_left";
@@ -139,7 +145,7 @@
             btn_sales.ForeColor = Color.White;
             btn_sales.Image = Properties.Resources.customers;
             btn_sales.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_sales.Location = new Point(0, 106);
+            btn_sales.Location = new Point(0, 281);
             btn_sales.Name = "btn_sales";
             btn_sales.Padding = new Padding(8, 0, 0, 0);
             btn_sales.Size = new Size(200, 53);
@@ -159,7 +165,7 @@
             btn_customer.ForeColor = Color.White;
             btn_customer.Image = Properties.Resources.sales;
             btn_customer.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_customer.Location = new Point(0, 53);
+            btn_customer.Location = new Point(0, 228);
             btn_customer.Name = "btn_customer";
             btn_customer.Padding = new Padding(8, 0, 0, 0);
             btn_customer.Size = new Size(200, 53);
@@ -179,7 +185,7 @@
             btn_home.ForeColor = Color.White;
             btn_home.Image = Properties.Resources.home;
             btn_home.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_home.Location = new Point(0, 0);
+            btn_home.Location = new Point(0, 175);
             btn_home.Name = "btn_home";
             btn_home.Padding = new Padding(8, 0, 0, 0);
             btn_home.Size = new Size(200, 53);
@@ -202,6 +208,35 @@
             timer_sidebar_transition.Interval = 10;
             timer_sidebar_transition.Tick += timer_menu_transition_Tick;
             // 
+            // panel_user
+            // 
+            panel_user.Controls.Add(pictureBox1);
+            panel_user.Controls.Add(lbl_user_name);
+            panel_user.Dock = DockStyle.Top;
+            panel_user.Location = new Point(0, 0);
+            panel_user.Name = "panel_user";
+            panel_user.Size = new Size(200, 175);
+            panel_user.TabIndex = 5;
+            // 
+            // lbl_user_name
+            // 
+            lbl_user_name.AutoSize = true;
+            lbl_user_name.Font = new Font("Segoe UI", 12F);
+            lbl_user_name.ForeColor = Color.White;
+            lbl_user_name.Location = new Point(34, 145);
+            lbl_user_name.Name = "lbl_user_name";
+            lbl_user_name.Size = new Size(123, 21);
+            lbl_user_name.TabIndex = 0;
+            lbl_user_name.Text = "Name Lastname";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(34, 22);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(123, 120);
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -218,6 +253,9 @@
             ((System.ComponentModel.ISupportInitialize)picture_toggle).EndInit();
             panel_windows_action.ResumeLayout(false);
             panel_left.ResumeLayout(false);
+            panel_user.ResumeLayout(false);
+            panel_user.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -235,5 +273,8 @@
         private Button btn_customer;
         private Panel panel_main;
         private System.Windows.Forms.Timer timer_sidebar_transition;
+        private Panel panel_user;
+        private Label lbl_user_name;
+        private PictureBox pictureBox1;
     }
 }
