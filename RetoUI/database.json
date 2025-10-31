@@ -1,0 +1,29 @@
+{
+  "data": {
+    "customers": [
+      {
+        "id": 1,
+        "name": "Homero J Simpsom",
+        "cellphone": "22442118",
+        "address": "Avenida siempre viva 123"
+      },
+      {
+        "id": 1,
+        "name": "Mrs no body",
+        "cellphone": "222442248",
+        "address": "Kilombo 234"
+      }
+    ],
+    "sales": [
+      {
+        "id": 1,
+        "amount": 100,
+        "date": "Oct 20 2025",
+      }
+    ]
+  },
+  "settings": {
+    "username": "Usuario default"
+
+  }
+}
