@@ -40,11 +40,11 @@
             btn_sales = new Button();
             btn_customer = new Button();
             btn_home = new Button();
+            panel_user = new Panel();
+            pictureBox1 = new PictureBox();
+            lbl_user_name = new Label();
             panel_main = new Panel();
             timer_sidebar_transition = new System.Windows.Forms.Timer(components);
-            panel_user = new Panel();
-            lbl_user_name = new Label();
-            pictureBox1 = new PictureBox();
             panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picture_toggle).BeginInit();
             panel_windows_action.SuspendLayout();
@@ -61,7 +61,7 @@
             panel_top.Dock = DockStyle.Top;
             panel_top.Location = new Point(0, 0);
             panel_top.Name = "panel_top";
-            panel_top.Size = new Size(999, 44);
+            panel_top.Size = new Size(1282, 44);
             panel_top.TabIndex = 0;
             panel_top.MouseDown += top_panel_MouseDown;
             // 
@@ -83,7 +83,7 @@
             panel_windows_action.Controls.Add(btn_maximaze);
             panel_windows_action.Controls.Add(btn_close);
             panel_windows_action.Dock = DockStyle.Right;
-            panel_windows_action.Location = new Point(914, 0);
+            panel_windows_action.Location = new Point(1197, 0);
             panel_windows_action.Name = "panel_windows_action";
             panel_windows_action.Size = new Size(85, 44);
             panel_windows_action.TabIndex = 2;
@@ -194,20 +194,6 @@
             btn_home.UseVisualStyleBackColor = false;
             btn_home.Click += btn_home_Click;
             // 
-            // panel_main
-            // 
-            panel_main.BackColor = Color.FromArgb(27, 38, 59);
-            panel_main.Dock = DockStyle.Fill;
-            panel_main.Location = new Point(200, 44);
-            panel_main.Name = "panel_main";
-            panel_main.Size = new Size(799, 493);
-            panel_main.TabIndex = 2;
-            // 
-            // timer_sidebar_transition
-            // 
-            timer_sidebar_transition.Interval = 10;
-            timer_sidebar_transition.Tick += timer_menu_transition_Tick;
-            // 
             // panel_user
             // 
             panel_user.Controls.Add(pictureBox1);
@@ -217,6 +203,17 @@
             panel_user.Name = "panel_user";
             panel_user.Size = new Size(200, 175);
             panel_user.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox1.Image = Properties.Resources.user_icon;
+            pictureBox1.Location = new Point(34, 22);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(123, 120);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // lbl_user_name
             // 
@@ -229,20 +226,26 @@
             lbl_user_name.TabIndex = 0;
             lbl_user_name.Text = "Name Lastname";
             // 
-            // pictureBox1
+            // panel_main
             // 
-            pictureBox1.Location = new Point(34, 22);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(123, 120);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            panel_main.BackColor = Color.FromArgb(27, 38, 59);
+            panel_main.Dock = DockStyle.Fill;
+            panel_main.Location = new Point(200, 44);
+            panel_main.Name = "panel_main";
+            panel_main.Size = new Size(1082, 493);
+            panel_main.TabIndex = 2;
+            // 
+            // timer_sidebar_transition
+            // 
+            timer_sidebar_transition.Interval = 10;
+            timer_sidebar_transition.Tick += timer_menu_transition_Tick;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(13, 27, 42);
-            ClientSize = new Size(999, 537);
+            ClientSize = new Size(1282, 537);
             Controls.Add(panel_main);
             Controls.Add(panel_left);
             Controls.Add(panel_top);

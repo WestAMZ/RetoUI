@@ -1,6 +1,6 @@
 ﻿namespace RetoUI
 {
-    partial class StartForm
+    partial class LoadForm
     {
         /// <summary>
         ///  Required designer variable.

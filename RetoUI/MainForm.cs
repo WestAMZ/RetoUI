@@ -22,6 +22,11 @@ namespace RetoUI
         private Form activeForm = null;
         private bool menuExpand = true;
         private int sideBarSize = 200;
+        private Color BTN_NON_ACTIVE_BACKCOLOR = Color.FromArgb(13, 27, 42);
+        private Color BTN_NON_ACTIVE_FORECOLOR = Color.White;
+        private Color BTN_ACTIVE_BACKCOLOR = Color.FromArgb(65, 90, 119);
+        private Color BTN_ACTIVE_FORECOLOR = Color.White;
+
 
         // Constantes para mover la ventana
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -75,25 +80,44 @@ namespace RetoUI
 
         private void btn_home_Click(object sender, EventArgs e)
         {
-
+            CloseActiveForm();
+            SetActiveButton(this.btn_home);
+            SetActiveForm(new HomeForm());
         }
 
         private void btn_customer_Click(object sender, EventArgs e)
         {
             CloseActiveForm();
+            SetActiveButton(this.btn_customer);
             SetActiveForm(new CustomerForm());
+        }
+        private void SetActiveButton(Button btn) 
+        {
+            foreach (var item in panel_left.Controls)
+            {
+                var this_btn = item as Button;
+                if (this_btn != null) 
+                {
+                    this_btn.ForeColor = BTN_NON_ACTIVE_FORECOLOR;
+                    this_btn.BackColor = BTN_NON_ACTIVE_BACKCOLOR;
+                }
+            };
+            btn.ForeColor = BTN_ACTIVE_FORECOLOR;
+            btn.BackColor = BTN_ACTIVE_BACKCOLOR;
         }
 
         private void btn_sales_Click(object sender, EventArgs e)
         {
-
+            CloseActiveForm();
+            SetActiveForm(new SalesForm());
+            SetActiveButton(this.btn_sales);
         }
         private void CloseActiveForm()
         {
             if (activeForm != null)
             {
-                this.panel_main.Controls.Clear();
                 this.activeForm.Close();
+                this.panel_main.Controls.Clear();
             }
             this.activeForm = null;
         }

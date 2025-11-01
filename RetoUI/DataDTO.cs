@@ -30,6 +30,7 @@ namespace RetoUI
     public class Sale
     {
         public int id { get; set; }
+        public string product { get; set; }
         public decimal price { get; set; }
         public int amount { get; set; }
         public string date { get; set; }

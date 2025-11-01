@@ -1,6 +1,6 @@
 ﻿namespace RetoUI
 {
-    partial class CustomerForm
+    partial class SalesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            gridview = new DataGridView();
             panel_top = new Panel();
             panel2 = new Panel();
             btn_delete = new Button();
             btn_new = new Button();
             btn_edit = new Button();
             lbl_title = new Label();
-            ((System.ComponentModel.ISupportInitialize)gridview).BeginInit();
+            gridview = new DataGridView();
             panel_top.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gridview).BeginInit();
             SuspendLayout();
-            // 
-            // gridview
-            // 
-            gridview.AllowUserToAddRows = false;
-            gridview.AllowUserToDeleteRows = false;
-            gridview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            gridview.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            gridview.Location = new Point(12, 158);
-            gridview.Name = "gridview";
-            gridview.ReadOnly = true;
-            gridview.Size = new Size(904, 463);
-            gridview.TabIndex = 0;
             // 
             // panel_top
             // 
@@ -96,7 +84,6 @@
             btn_new.TabIndex = 1;
             btn_new.Text = "Nuevo";
             btn_new.UseVisualStyleBackColor = true;
-            btn_new.Click += btn_new_Click;
             // 
             // btn_edit
             // 
@@ -116,11 +103,23 @@
             lbl_title.ForeColor = Color.White;
             lbl_title.Location = new Point(25, 10);
             lbl_title.Name = "lbl_title";
-            lbl_title.Size = new Size(119, 37);
+            lbl_title.Size = new Size(102, 37);
             lbl_title.TabIndex = 2;
-            lbl_title.Text = "Clientes";
+            lbl_title.Text = "Ventas";
             // 
-            // CustomerForm
+            // gridview
+            // 
+            gridview.AllowUserToAddRows = false;
+            gridview.AllowUserToDeleteRows = false;
+            gridview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            gridview.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gridview.Location = new Point(12, 162);
+            gridview.Name = "gridview";
+            gridview.ReadOnly = true;
+            gridview.Size = new Size(904, 459);
+            gridview.TabIndex = 0;
+            // 
+            // SalesForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -129,24 +128,22 @@
             Controls.Add(panel_top);
             Controls.Add(gridview);
             MaximumSize = new Size(944, 672);
-            Name = "CustomerForm";
-            Text = "Clientes";
-            WindowState = FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)gridview).EndInit();
+            Name = "SalesForm";
+            Text = "SalesForm";
             panel_top.ResumeLayout(false);
             panel_top.PerformLayout();
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)gridview).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private DataGridView gridview;
         private Panel panel_top;
         private Panel panel2;
         private Button btn_delete;
         private Button btn_new;
         private Button btn_edit;
         private Label lbl_title;
+        private DataGridView gridview;
     }
 }

@@ -1,8 +1,8 @@
 namespace RetoUI
 {
-    public partial class StartForm : Form
+    public partial class LoadForm : Form
     {
-        public StartForm()
+        public LoadForm()
         {
             InitializeComponent();
             this.timer.Start();
