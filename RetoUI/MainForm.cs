@@ -140,6 +140,7 @@ namespace RetoUI
 
         private void picture_toggle_Click(object sender, EventArgs e)
         {
+            panel_user.Visible = !panel_user.Visible;
             timer_sidebar_transition.Start();
         }
     }
