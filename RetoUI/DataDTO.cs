@@ -29,7 +29,10 @@ namespace RetoUI
 
     public class Sale
     {
-        // Puedes definir las propiedades de las ventas aquí
+        public int id { get; set; }
+        public decimal price { get; set; }
+        public int amount { get; set; }
+        public string date { get; set; }
     }
 
     public class Settings

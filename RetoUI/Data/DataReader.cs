@@ -16,7 +16,7 @@ namespace RetoUI
             {
                 // Ruta del archivo JSON
                 //string filePath = Application.StartupPath + ".\\...\\...\\data.json";
-                string filePath = "\\...\\...\\database.json";
+                string filePath = ".\\database.json";
 
                 // Leer todo el contenido del archivo
                 string jsonContent = File.ReadAllText(filePath);

@@ -3,22 +3,205 @@
     "customers": [
       {
         "id": 1,
-        "name": "Homero J Simpsom",
-        "cellphone": "22442118",
-        "address": "Avenida siempre viva 123"
+        "name": "Homero J Simpson",
+        "cellphone": "82441234",
+        "address": "Avenida Siempre Viva #742, Residencial Springfield, Managua"
       },
       {
-        "id": 1,
-        "name": "Mrs no body",
-        "cellphone": "222442248",
-        "address": "Kilombo 234"
+        "id": 2,
+        "name": "Marge Bouvier Simpson",
+        "cellphone": "83991125",
+        "address": "Calle Los Robles, detrás del Parque Central, Managua"
+      },
+      {
+        "id": 3,
+        "name": "Ned Flanders",
+        "cellphone": "85567890",
+        "address": "Residencial Villa Flor, Calle Las Magnolias, casa #21, Managua"
+      },
+      {
+        "id": 4,
+        "name": "Lisa M Simpson",
+        "cellphone": "88851234",
+        "address": "Colonia Centroamérica, del Colegio Bautista 3 cuadras al norte, Managua"
+      },
+      {
+        "id": 5,
+        "name": "Bart J Simpson",
+        "cellphone": "87542218",
+        "address": "Residencial Monte Tabor, bloque 5, casa #17, carretera a Masaya"
+      },
+      {
+        "id": 6,
+        "name": "Moe Szyslak",
+        "cellphone": "89673412",
+        "address": "Barrio San Judas, de la iglesia 2 cuadras al oeste y media al sur, Managua"
+      },
+      {
+        "id": 7,
+        "name": "Apu Nahasapeemapetilon",
+        "cellphone": "85997744",
+        "address": "Frente al mercado Iván Montenegro, esquina del Super Kwik-E-Mart, Managua"
+      },
+      {
+        "id": 8,
+        "name": "Milhouse Van Houten",
+        "cellphone": "88451167",
+        "address": "Residencial Las Colinas, calle Los Cedros, casa #42, Managua"
+      },
+      {
+        "id": 9,
+        "name": "Clancy Wiggum",
+        "cellphone": "82129988",
+        "address": "Urbanización Lomas del Valle, contiguo al Hospital Militar, Managua"
+      },
+      {
+        "id": 10,
+        "name": "Edna Krabappel",
+        "cellphone": "87775566",
+        "address": "Carretera Sur, km 9.5, 400 metros al oeste del Colegio Lincoln, Managua"
       }
     ],
     "sales": [
       {
         "id": 1,
-        "amount": 100,
-        "date": "Oct 20 2025",
+        "product": "Electrolit 1/2 litro",
+        "price": 20.5,
+        "amount": 3,
+        "date": "Oct 20 2025"
+      },
+      {
+        "id": 2,
+        "product": "Coca-Cola 600ml",
+        "price": 18.0,
+        "amount": 2,
+        "date": "Oct 19 2025"
+      },
+      {
+        "id": 3,
+        "product": "Pan Bimbo grande",
+        "price": 45.0,
+        "amount": 1,
+        "date": "Oct 18 2025"
+      },
+      {
+        "id": 4,
+        "product": "Leche Dos Pinos 1L",
+        "price": 32.5,
+        "amount": 2,
+        "date": "Oct 18 2025"
+      },
+      {
+        "id": 5,
+        "product": "Arroz Premium 2kg",
+        "price": 55.0,
+        "amount": 1,
+        "date": "Oct 17 2025"
+      },
+      {
+        "id": 6,
+        "product": "Aceite Ideal 1L",
+        "price": 48.75,
+        "amount": 1,
+        "date": "Oct 17 2025"
+      },
+      {
+        "id": 7,
+        "product": "Cereal Corn Flakes 400g",
+        "price": 65.0,
+        "amount": 1,
+        "date": "Oct 16 2025"
+      },
+      {
+        "id": 8,
+        "product": "Jabón Dove 3 pack",
+        "price": 90.0,
+        "amount": 2,
+        "date": "Oct 16 2025"
+      },
+      {
+        "id": 9,
+        "product": "Toallas húmedas Huggies",
+        "price": 75.5,
+        "amount": 1,
+        "date": "Oct 15 2025"
+      },
+      {
+        "id": 10,
+        "product": "Refresco Mirinda 1.5L",
+        "price": 30.0,
+        "amount": 3,
+        "date": "Oct 15 2025"
+      },
+      {
+        "id": 11,
+        "product": "Detergente Ariel 1kg",
+        "price": 85.0,
+        "amount": 1,
+        "date": "Oct 14 2025"
+      },
+      {
+        "id": 12,
+        "product": "Galletas Choco Chips 250g",
+        "price": 40.0,
+        "amount": 2,
+        "date": "Oct 14 2025"
+      },
+      {
+        "id": 13,
+        "product": "Café Presto 500g",
+        "price": 120.0,
+        "amount": 1,
+        "date": "Oct 13 2025"
+      },
+      {
+        "id": 14,
+        "product": "Azúcar blanca 2kg",
+        "price": 50.0,
+        "amount": 1,
+        "date": "Oct 13 2025"
+      },
+      {
+        "id": 15,
+        "product": "Gaseosa Pepsi 2L",
+        "price": 40.0,
+        "amount": 2,
+        "date": "Oct 12 2025"
+      },
+      {
+        "id": 16,
+        "product": "Papel higiénico Scott 4 rollos",
+        "price": 65.0,
+        "amount": 1,
+        "date": "Oct 11 2025"
+      },
+      {
+        "id": 17,
+        "product": "Shampoo Head & Shoulders 400ml",
+        "price": 95.0,
+        "amount": 1,
+        "date": "Oct 10 2025"
+      },
+      {
+        "id": 18,
+        "product": "Desodorante Rexona aerosol",
+        "price": 70.5,
+        "amount": 2,
+        "date": "Oct 9 2025"
+      },
+      {
+        "id": 19,
+        "product": "Galletas Ritz 300g",
+        "price": 45.0,
+        "amount": 1,
+        "date": "Oct 9 2025"
+      },
+      {
+        "id": 20,
+        "product": "Jugo Del Valle 1L",
+        "price": 35.0,
+        "amount": 4,
+        "date": "Oct 8 2025"
       }
     ]
   },
